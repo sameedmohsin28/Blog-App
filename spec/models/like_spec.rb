@@ -9,9 +9,10 @@ RSpec.describe Like, type: :model do
       @like = Like.new(user_id: @user.id, post_id: @post.id)
     end
 
-    it 'post_id must not be blank' do
-      @like.post_id = nil
-      expect(@like).to_not be_valid
+    it 'Should update likes counter' do
+      @like.save
+      @post.reload
+      expect(@post.likes_counter).to eq(1)
     end
   end
 end
