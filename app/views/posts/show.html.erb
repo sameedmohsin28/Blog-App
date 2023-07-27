@@ -1,1 +1,39 @@
-<h1>Posts#show</h1>
+<%# <h1>Posts#show</h1> %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+    <meta http-equiv = "Content-Language" content = "en-us" />
+    <title>Post Details</title>
+    
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <%= @post.title %> by <%= @post.author.name %>
+      </div>
+      <div>
+        Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %>
+      </div>
+      <br>
+      <div>
+        <%= @post.text %>
+      </div>
+      <br>
+      <div>
+        <% @post.comments.each do |comment| %>
+          <div>
+            <%= comment.user.name %>: <%= comment.text %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  
+  </body>
+   
+</html>
+
