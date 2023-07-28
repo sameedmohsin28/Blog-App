@@ -53,7 +53,6 @@
 .user-photo {
   width: 140px;
   height: 100px;
-
 }
 
 .user-name {
@@ -129,14 +128,14 @@
 }
 
 /* ==================== for posts#index ==================== */
-.post-index-page-main-div{
+.post-index-page-main-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 0;
 }
 
-.post-index-page-sub-div{
+.post-index-page-sub-div {
   display: flex;
   flex-direction: column;
   align-items: center;
