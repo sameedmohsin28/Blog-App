@@ -1,59 +1,27 @@
 <%# <h1>Posts#index</h1> %>
 
-<%# <h1>Users#index</h1> %>
+<div class="post-index-page-main-div">
+  <div class="post-index-page-sub-div">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns = "http://www.w3.org/1999/xhtml">
-
-  <head>
-    <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
-    <meta http-equiv = "Content-Language" content = "en-us" />
-    <title>User Posts</title>
+    <%= render "users/individual_user" %>
     
-  </head>
+    <div class="all-posts-container">
+      <% @posts.each do |post| %>
+        <%= link_to post_path(post), class: "individual-posts-container" do %>
+          
+          <%= render partial: 'posts_details_block', locals: { post: post } %>
 
-  <body>
-    <div>
-      <div>
-        <%= image_tag('https://placekitten.com/800/400', size: "140x100")%>
-        <%= @user.name %>
-        <div>Number of Posts: <%= @user.posts_counter %></div>
-      </div>
-      <br><br>
-      <div>
-        <div>Bio<div>
-        <div><%= @user.bio %></div>
-      </div>
-      <br>
-      <div>
-        <% @posts.each do |post| %>
-          <div>
-            <div>
-            <%= post.title %>
+          <% if post.most_recent.any? %>
+            <div class="comments-container">
+              <% post.most_recent.each do |comment| %>
+                <p class="individual-comment"><%= comment.user.name %>: <%= comment.text %></p>
+              <% end %>
             </div>
-            <div>
-              <%= post.text %>
-            </div>
-            <div>
-              <span>Comments: </span> <%= post.comments_counter %> <span>, Likes: </span> <%= post.likes_counter %>
-            </div>
-          </div>
-          <br>
-          <div>
-            <% post.most_recent.each do |comment| %>
-              <div>
-                <%= comment.user.name %>: <%= comment.text %>
-              </div>
-            <% end %>
-          </div>
-          <br>
+          <% end %>
         <% end %>
-      </div>
-      <button>Pagination</button>
+      <% end %>
     </div>
-  
-  </body>
-   
-</html>
+    <button class="pagination-btn">Pagination</button>
+  </div>
+</div>
 

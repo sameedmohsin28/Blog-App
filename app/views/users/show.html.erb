@@ -1,48 +1,21 @@
 <%# <h1>Users#show</h1> %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div class="specific-user-details-page-main-div">
+  <div class="specific-user-details-page-sub-div">
 
-<html xmlns = "http://www.w3.org/1999/xhtml">
-
-  <head>
-    <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
-    <meta http-equiv = "Content-Language" content = "en-us" />
-    <title>User Details</title>
+    <%= render "individual_user" %>
     
-  </head>
-
-  <body>
-    <div>
-      <div>
-        <%= image_tag('https://placekitten.com/800/400', size: "140x100")%>
-        <%= @user.name %>
-        <div>Number of Posts: <%= @user.posts_counter %></div>
-      </div>
-      <br><br>
-      <div>
-        <div>Bio<div>
-        <div><%= @user.bio %></div>
-      </div>
-      <br>
-      <div>
-        <% @user.most_recent.each do |post| %>
-          <div>
-              <div>
-              <%= post.title %>
-              </div>
-              <div>
-                <%= post.text %>
-              </div>
-              <div>
-                <span>Comments: </span> <%= post.comments_counter %> <span>, Likes: </span> <%= post.likes_counter %>
-              </div>
-          </div>
-          <br>
-        <% end %>
-      </div>
-      <button>See All</button>
+    <div class="user-bio-container">
+      <h4 class="user-bio-heading">Bio</h4>
+      <div class="user-bio-text"><%= @user.bio %></div>
     </div>
-  
-  </body>
-   
-</html>
+    <div class="user-recent-posts-container">
+      <% @user.most_recent.each do |post| %>
+        
+        <%= render partial: 'posts/posts_details_block', locals: { post: post } %>
+
+      <% end %>
+    </div>
+    <%= link_to 'See all posts', user_posts_path(@user), class: 'see-all-posts-button' %>
+  </div>
+</div>

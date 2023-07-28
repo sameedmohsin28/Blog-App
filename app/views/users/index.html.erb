@@ -1,27 +1,19 @@
 <%# <h1>Users#index</h1> %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns = "http://www.w3.org/1999/xhtml">
-
-  <head>
-    <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
-    <meta http-equiv = "Content-Language" content = "en-us" />
-    <title>Users</title>
-    
-  </head>
-
-  <body>
-  <div>All Users</div>
-  <div>
-    <% @users.each do |user| %>
-      <div>
-        <%= image_tag('https://placekitten.com/800/400', size: "140x100") %>
-        <%= user.name %>
-      </div>
-    <% end %>
-  </div>
-  
-  </body>
-   
-</html>
+<div class="user-index-page-main-div">
+  <div class="user-index-page-sub-div">
+    <h1 class="all-users-heading">All Users</h1>
+    <div class="all-users-container">
+      <% @users.each do |user| %>
+        <%= link_to user_path(user), class: "individual-user-container" do %>
+          <div class="user-image">
+            <%= image_tag user.photo, class: 'user-photo' %>
+          </div>
+          <div class="user-name-and-number-of-posts">
+            <h2 class="user-name"><%= user.name %></h2>
+            <p class="number-of-posts">Number of posts: <%= user.posts_counter %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>    
+  </div>    
+</div>    

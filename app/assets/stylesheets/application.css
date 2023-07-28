@@ -1,15 +1,204 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-index-page-main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-index-page-sub-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding-top: 10px;
+  width: 50%;
+  min-width: 550px;
+}
+
+.all-users-heading {
+  font-size: 30px;
+}
+
+.all-users-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.individual-user-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  row-gap: 10px;
+  width: 100%;
+}
+
+.user-name-and-number-of-posts {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.user-photo {
+  width: 140px;
+  height: 100px;
+
+}
+
+.user-name {
+  font-size: 50px;
+}
+
+.number-of-posts {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+/* ==================== for user#show ==================== */
+.specific-user-details-page-main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.specific-user-details-page-sub-div {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 50%;
+  min-width: 550px;
+}
+
+.user-bio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid black;
+  width: 100%;
+  padding: 8px;
+}
+
+.user-bio-heading {
+  font-size: 25px;
+}
+
+.user-bio-text {
+  font-size: 17px;
+}
+
+.user-recent-posts-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.posts-details-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid black;
+  width: 100%;
+  padding: 8px;
+}
+
+.post-title {
+  padding-bottom: 10px;
+}
+
+.post-likes-and-comments-counter {
+  align-self: flex-end;
+  font-size: 13px;
+}
+
+/* ==================== for posts#index ==================== */
+.post-index-page-main-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.post-index-page-sub-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 50%;
+  min-width: 550px;
+}
+
+.all-posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  width: 100%;
+}
+
+.individual-posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.comments-container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  width: 100%;
+  padding: 8px;
+}
+
+/* ================== posts#show ==================== */
+.specific-post-details-page-main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.specific-post-details-page-sub-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 50%;
+  min-width: 550px;
+}
+
+.specific-post-details {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 15px;
+  padding: 8px;
+}
+
+.specific-post-likes-comments {
+  align-self: flex-end;
+  font-size: 13px;
+}

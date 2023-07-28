@@ -1,39 +1,16 @@
 <%# <h1>Posts#show</h1> %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns = "http://www.w3.org/1999/xhtml">
-
-  <head>
-    <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
-    <meta http-equiv = "Content-Language" content = "en-us" />
-    <title>Post Details</title>
-    
-  </head>
-
-  <body>
-    <div>
-      <div>
-        <%= @post.title %> by <%= @post.author.name %>
-      </div>
-      <div>
-        Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %>
-      </div>
-      <br>
-      <div>
-        <%= @post.text %>
-      </div>
-      <br>
-      <div>
-        <% @post.comments.each do |comment| %>
-          <div>
-            <%= comment.user.name %>: <%= comment.text %>
-          </div>
-        <% end %>
-      </div>
+<div class="specific-post-details-page-main-div">
+  <div class="specific-post-details-page-sub-div">
+    <div class="specific-post-details">
+      <h3 class="specific-post-title"><%= @post.title %> by <%= @post.author.name %></h3>
+      <p class="specific-post-likes-comments">Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+      <p class="specific-post-text"><%= @post.text %></p>
     </div>
-  
-  </body>
-   
-</html>
-
+    <div class="comments-container">
+      <% @post.comments.each do |comment| %>
+        <p class="individual-comment"><%= comment.user.name %>: <%= comment.text %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

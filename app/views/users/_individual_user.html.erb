@@ -1,0 +1,9 @@
+<div class="individual-user-container">
+  <div class="user-image">
+    <%= image_tag @user.photo, class: 'user-photo' %>
+  </div>
+  <div class="user-name-and-number-of-posts">
+    <h2 class="user-name"><%= @user.name %></h2>
+    <p class="number-of-posts">Number of posts: <%= @user.posts_counter %></p>
+  </div>
+</div>
