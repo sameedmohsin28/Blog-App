@@ -1,1 +1,27 @@
-<h1>Posts#index</h1>
+<%# <h1>Posts#index</h1> %>
+
+<div class="post-index-page-main-div">
+  <div class="post-index-page-sub-div">
+
+    <%= render "users/individual_user" %>
+    
+    <div class="all-posts-container">
+      <% @posts.each do |post| %>
+        <%= link_to post_path(post), class: "individual-posts-container" do %>
+          
+          <%= render partial: 'posts_details_block', locals: { post: post } %>
+
+          <% if post.most_recent.any? %>
+            <div class="comments-container">
+              <% post.most_recent.each do |comment| %>
+                <p class="individual-comment"><%= comment.user.name %>: <%= comment.text %></p>
+              <% end %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+    <button class="pagination-btn">Pagination</button>
+  </div>
+</div>
+

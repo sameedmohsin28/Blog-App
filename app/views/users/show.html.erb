@@ -1,1 +1,21 @@
-<h1>Users#show</h1>
+<%# <h1>Users#show</h1> %>
+
+<div class="specific-user-details-page-main-div">
+  <div class="specific-user-details-page-sub-div">
+
+    <%= render "individual_user" %>
+    
+    <div class="user-bio-container">
+      <h4 class="user-bio-heading">Bio</h4>
+      <div class="user-bio-text"><%= @user.bio %></div>
+    </div>
+    <div class="user-recent-posts-container">
+      <% @user.most_recent.each do |post| %>
+        
+        <%= render partial: 'posts/posts_details_block', locals: { post: post } %>
+
+      <% end %>
+    </div>
+    <%= link_to 'See all posts', user_posts_path(@user), class: 'see-all-posts-button' %>
+  </div>
+</div>

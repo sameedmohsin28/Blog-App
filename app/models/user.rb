@@ -3,6 +3,8 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
 
+  attribute :posts_counter, :integer, default: 0
+
   validates :name, presence: true
   validates :posts_counter, numericality: { greater_than_or_equal_to: 0, only_integer: true }
 

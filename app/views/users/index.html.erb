@@ -1,1 +1,19 @@
-<h1>Users#index</h1>
+<%# <h1>Users#index</h1> %>
+<div class="user-index-page-main-div">
+  <div class="user-index-page-sub-div">
+    <h1 class="all-users-heading">All Users</h1>
+    <div class="all-users-container">
+      <% @users.each do |user| %>
+        <%= link_to user_path(user), class: "individual-user-container" do %>
+          <div class="user-image">
+            <%= image_tag user.photo, class: 'user-photo' %>
+          </div>
+          <div class="user-name-and-number-of-posts">
+            <h2 class="user-name"><%= user.name %></h2>
+            <p class="number-of-posts">Number of posts: <%= user.posts_counter %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>    
+  </div>    
+</div>    
