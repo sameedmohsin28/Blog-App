@@ -4,7 +4,7 @@ RSpec.feature 'User index page', type: :feature do
   before do
     @user1 = User.create(name: 'Sameed', bio: 'He is from Pakistan', photo: 'https://placekitten.com/200/200', posts_counter: 3)
     @user2 = User.create(name: 'Cisco', bio: 'He is from Nigeria', photo: 'https://placekitten.com/200/200', posts_counter: 4)
-    @user3 = User.create(name: 'Reviewer', bio: 'They are from Microverse', photo: 'https://placekitten.com/200/200', posts_counter: 5)
+    @user3 = User.create(name: 'Code Reviewer', bio: 'They are from Microverse', photo: 'https://placekitten.com/200/200', posts_counter: 5)
     visit users_path
   end
 
