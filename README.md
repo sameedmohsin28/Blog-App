@@ -76,6 +76,12 @@ Clone this repository to your desired folder:
 - Twitter: [@sameedmohsin22](https://twitter.com/SameedMohsin22)
 - LinkedIn: [Sameed Mohsin](https://www.linkedin.com/in/sameed-mohsin-538792180/)
 
+👤 **Adegboyega Boluwatife**
+
+- GitHub: [@githubhandle](https://github.com/Cisco-the-wayword)
+- Twitter: [@twitterhandle](https://twitter.com/the-wayword1)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/boluwatife-adegboyega/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
