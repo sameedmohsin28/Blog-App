@@ -6,7 +6,7 @@
       <% @users.each do |user| %>
         <%= link_to user_path(user), class: "individual-user-container" do %>
           <div class="user-image">
-            <%= image_tag(user.photo, class: 'user-photo') %>
+            <img class = "user-photo" src=<%= user.photo %> alt="user image" />
           </div>
           <div class="user-name-and-number-of-posts">
             <h2 class="user-name"><%= user.name %></h2>
