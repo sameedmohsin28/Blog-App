@@ -39,7 +39,7 @@ RSpec.feature 'User show page', type: :feature do
   end
 
   scenario 'redirects to the post show page' do
-    click_link ('Post 4')
+    click_link Post.last.title
     expect(page).to have_current_path(user_post_path(@user1, @post4))
   end
 
