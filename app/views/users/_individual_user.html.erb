@@ -1,6 +1,8 @@
 <div class="individual-user-container">
   <div class="user-image">
-    <%= image_tag @user.photo, class: 'user-photo' %>
+    <% if @user.photo %>
+      <%= image_tag @user.photo, class: 'user-photo' %>
+    <% end %>
   </div>
   <div class="user-name-and-number-of-posts">
     <h2 class="user-name"><%= @user.name %></h2>

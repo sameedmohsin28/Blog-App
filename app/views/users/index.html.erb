@@ -6,7 +6,9 @@
       <% @users.each do |user| %>
         <%= link_to user_path(user), class: "individual-user-container" do %>
           <div class="user-image">
+          <% if user.photo %>
             <img class = "user-photo" src=<%= user.photo %> alt="user image" />
+          <% end %>
           </div>
           <div class="user-name-and-number-of-posts">
             <h2 class="user-name"><%= user.name %></h2>
