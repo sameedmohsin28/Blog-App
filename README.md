@@ -68,7 +68,7 @@ Clone this repository to your desired folder:
 `code .`
 
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Sameed Mohsin**
 
