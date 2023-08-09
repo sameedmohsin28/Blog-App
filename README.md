@@ -76,11 +76,17 @@ Clone this repository to your desired folder:
 - Twitter: [@sameedmohsin22](https://twitter.com/SameedMohsin22)
 - LinkedIn: [Sameed Mohsin](https://www.linkedin.com/in/sameed-mohsin-538792180/)
 
-👤 **Adegboyega Boluwatife**
+👤 **Javed Shahbaz**
 
-- GitHub: [@githubhandle](https://github.com/Cisco-the-wayword)
-- Twitter: [@twitterhandle](https://twitter.com/the-wayword1)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/boluwatife-adegboyega/)
+- GitHub: [@Javed-Shahbaz](https://github.com/Javed-Shahbaz)
+- Twitter: [@javedshahbaz007](https://twitter.com/javedshahbaz007)
+- LinkedIn: [@javedshahbaz](https://www.linkedin.com/in/javedshahbaz/)
+
+👤 **Abiola Arobieke**
+
+- GitHub: [@abiola-arobieke](https://github.com/abiola-arobieke)
+- Linkedin: [@abiola-arobieke](https://linkedin.com/in/abiola-arobieke)
+- Twitter: [@abiola_arobieke](https://twitter.com/abiola_arobieke)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
