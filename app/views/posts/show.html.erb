@@ -11,11 +11,10 @@
       <% @post.comments.each do |comment| %>
         <p class="individual-comment"><%= comment.user.name %>: <%= comment.text %></p>
         <p>
-  <% if can? :destroy, comment %>
-    <%= button_to 'Delete Comment', user_post_comment_path(comment.post.author, comment.post, comment), method: :delete %>
-  <% end %>
-</p>
-
+          <% if can? :destroy, comment %>
+            <%= button_to 'Delete Comment', user_post_comment_path(comment.post.author, comment.post, comment), method: :delete %>
+          <% end %>
+        </p>
       <% end %>
     </div>
     <div class="add-likes-and-comments-container">
