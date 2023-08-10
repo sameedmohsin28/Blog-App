@@ -78,9 +78,8 @@ Clone this repository to your desired folder:
 👤 **Abiola Arobieke**
 
 - GitHub: [@abiola-arobieke](https://github.com/abiola-arobieke)
-- Twitter: [@abiola_arobieke](https://twitter.com/abiola_arobieke)
 - Linkedin: [@abiola-arobieke](https://linkedin.com/in/abiola-arobieke)
-
+- Twitter: [@abiola_arobieke](https://twitter.com/abiola_arobieke)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
