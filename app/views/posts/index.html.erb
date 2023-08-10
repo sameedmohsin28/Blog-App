@@ -3,13 +3,13 @@
 <div class="post-index-page-main-div">
   <div class="post-index-page-sub-div">
 
-    <%= render "users/individual_user" %>
+    <%= render "shared/individual_user" %>
     
     <div class="all-posts-container">
       <% @posts.each do |post| %>
         <%= link_to user_post_path(@user, post), class: "individual-posts-container" do %>
           
-          <%= render partial: 'posts_details_block', locals: { post: post } %>
+          <%= render partial: 'shared/posts_details_block', locals: { post: post } %>
 
           <% if post.most_recent.any? %>
             <div class="comments-container">
@@ -18,6 +18,9 @@
               <% end %>
             </div>
           <% end %>
+          <% if can? :destroy, post %>
+            <%= link_to "Delete Post" , user_post_path(post.author, post), data: {turbo_method: :delete} %>
+          <% end %> 
         <% end %>
       <% end %>
     </div>

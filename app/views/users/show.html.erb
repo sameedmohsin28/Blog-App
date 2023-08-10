@@ -3,7 +3,7 @@
 <div class="specific-user-details-page-main-div">
   <div class="specific-user-details-page-sub-div">
 
-    <%= render "individual_user" %>
+    <%= render "shared/individual_user" %>
     
     <div class="user-bio-container">
       <h4 class="user-bio-heading">Bio</h4>
@@ -12,7 +12,7 @@
     <div class="user-recent-posts-container">
       <% @user.most_recent.each do |post| %>
         <%= link_to user_post_path(@user, post), class: "individual-posts-container" do %>
-          <%= render partial: 'posts/posts_details_block', locals: { post: post } %>
+          <%= render partial: 'shared/posts_details_block', locals: { post: post } %>
         <% end %>
       <% end %>
     </div>
