@@ -10,6 +10,7 @@
     <div class="comments-container">
       <% @post.comments.each do |comment| %>
         <p class="individual-comment"><%= comment.user.name %>: <%= comment.text %></p>
+        
       <% end %>
     </div>
     <div class="add-likes-and-comments-container">

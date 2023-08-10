@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments, :likes)
@@ -23,12 +25,20 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by(id: params[:id])
   end
-end
 
-private
+  def destroy
+    @post = Post.find(params[:id])
+    @author = @post.author
+    return unless @post.destroy!
 
-def post_params
-  params.require(:post).permit(:title, :text)
+    redirect_to user_posts_path(@author, @post), notice: 'Post was deleted successfully'
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end
 
 # rails generate controller PostsController index show
