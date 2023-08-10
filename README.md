@@ -6,7 +6,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -43,12 +42,6 @@ This app contains
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-Coming Soon
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
@@ -68,7 +61,7 @@ Clone this repository to your desired folder:
 `code .`
 
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Sameed Mohsin**
 
@@ -76,11 +69,18 @@ Clone this repository to your desired folder:
 - Twitter: [@sameedmohsin22](https://twitter.com/SameedMohsin22)
 - LinkedIn: [Sameed Mohsin](https://www.linkedin.com/in/sameed-mohsin-538792180/)
 
-👤 **Adegboyega Boluwatife**
+👤 **Javed Shahbaz**
 
-- GitHub: [@githubhandle](https://github.com/Cisco-the-wayword)
-- Twitter: [@twitterhandle](https://twitter.com/the-wayword1)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/boluwatife-adegboyega/)
+- GitHub: [@Javed-Shahbaz](https://github.com/Javed-Shahbaz)
+- Twitter: [@javedshahbaz007](https://twitter.com/javedshahbaz007)
+- LinkedIn: [@javedshahbaz](https://www.linkedin.com/in/javedshahbaz/)
+
+👤 **Abiola Arobieke**
+
+- GitHub: [@abiola-arobieke](https://github.com/abiola-arobieke)
+- Twitter: [@abiola_arobieke](https://twitter.com/abiola_arobieke)
+- Linkedin: [@abiola-arobieke](https://linkedin.com/in/abiola-arobieke)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
