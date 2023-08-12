@@ -6,8 +6,8 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @comments }
-      format.json { render :json => @comments }
+      format.xml { render xml: @comments }
+      format.json { render json: @comments }
     end
   end
 
