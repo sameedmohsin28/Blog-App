@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      post 'sessions' => 'sessions#create'
+      resources :users, only: [] do
+        resources :posts, only: [:index] do
+          resources :comments, only: [:index, :create]
+        end
+      end
+    end
+  end
+
   devise_for :users
   get 'comments/new'
   get 'comments/create'
@@ -13,7 +24,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :new, :create, :show, :destroy] do
-      resources :comments, only: [:new, :create, :destroy]
+      resources :comments, only: [:index, :new, :create, :destroy]
       resources :likes, only: [:create]
     end
   end
